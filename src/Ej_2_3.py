@@ -1,4 +1,4 @@
-def impares(ultimo: int):
+def impares(ultimo: int) -> str:
     resultado = ""
     for n in range(0, ultimo, 2):
         resultado += f"{n+1}, "

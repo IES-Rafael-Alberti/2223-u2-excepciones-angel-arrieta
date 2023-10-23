@@ -1,4 +1,4 @@
-def unaVida(edad: int):
+def unaVida(edad: int) -> str:
     resultado = ""
     if edad == 0:
         resultado = "0\n"

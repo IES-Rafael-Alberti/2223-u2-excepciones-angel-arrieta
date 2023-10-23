@@ -1,4 +1,4 @@
-def cuentaAtras(inicio: int):
+def cuentaAtras(inicio: int) -> str:
     resultado = ""
     for n in range(inicio, -1, -1):
         resultado += f"{n}, "

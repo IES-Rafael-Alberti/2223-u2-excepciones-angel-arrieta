@@ -1,4 +1,4 @@
-def esEntero(numero: int):
+def esEntero(numero: int) -> bool:
     if type(numero) == int:
         respuesta = False
     else:

@@ -1,4 +1,4 @@
-def contrasena(usuario: str):
+def contrasena(usuario: str) -> bool:
     if usuario == "contrasena":
         respuesta = True
     else:
