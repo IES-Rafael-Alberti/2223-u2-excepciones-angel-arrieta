@@ -1,15 +1,23 @@
-def example(ejemplo):
-    ejemplo = None
-    return ejemplo
+def impares(ultimo: int):
+    resultado = ""
+    for n in range(0, ultimo, 2):
+        resultado += f"{n+1}, "
+    return resultado[:-2]
 
 
 if __name__ == "__main__":
-    try:
-        # Entrada
-        entrada = str(input(">\t"))
-    except ValueError:
-        print("")
+    numeroValido = False
+    while not numeroValido:
+        try:
+            # Entrada
+            ultimo_numero = input("Lista de números impares. Dime hasta que número llego\t")
+            numero_util = int(ultimo_numero)
+            if numero_util <= 0:
+                raise ValueError
+            numeroValido = True
+        except ValueError:
+            print("Por favor, introduzca un rango valido")
     # Proceso
-    procesado = example(entrada)
+    lista_impares = impares(numero_util)
     # Salida
-    print(procesado)
+    print(lista_impares)

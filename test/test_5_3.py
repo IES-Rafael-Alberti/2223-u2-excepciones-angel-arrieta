@@ -1,14 +1,17 @@
 import pytest
-from src.Ej_5_3 import example
+from src.Ej_5_3 import contrasena
 
 
 @pytest.mark.parametrize(
-    "inEjemplo, outMensaje",
+    "inUsuario, outBoolean",
     [
-        ("Prueba1", "Salida"),
+        ("trebol", False),
+        (1, False),
+        (["haha", 37], False),
+        ("contrasena", True)
     ]
 )
 
 
-def test_example(inEjemplo, outMensaje):
-    assert example(inEjemplo) == outMensaje
+def test_contrasena(inUsuario, outBoolean):
+    assert contrasena(inUsuario) == outBoolean

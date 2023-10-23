@@ -1,14 +1,16 @@
 import pytest
-from src.Ej_3_3 import example
+from src.Ej_3_3 import cuentaAtras
 
 
 @pytest.mark.parametrize(
     "inEjemplo, outMensaje",
     [
-        ("Prueba1", "Salida"),
+        (1, "1, 0"),
+        (3, "3, 2, 1, 0"),
+        (7, "7, 6, 5, 4, 3, 2, 1, 0"),
     ]
 )
 
 
-def test_example(inEjemplo, outMensaje):
-    assert example(inEjemplo) == outMensaje
+def test_cuentaAtras(inEjemplo, outMensaje):
+    assert cuentaAtras(inEjemplo) == outMensaje

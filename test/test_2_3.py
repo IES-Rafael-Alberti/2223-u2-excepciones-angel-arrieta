@@ -1,14 +1,16 @@
 import pytest
-from src.Ej_2_3 import example
+from src.Ej_2_3 import impares
 
 
 @pytest.mark.parametrize(
-    "inEjemplo, outMensaje",
+    "inRango, outMensaje",
     [
-        ("Prueba1", "Salida"),
+        (2, "1"),
+        (3, "1, 3"),
+        (8, "1, 3, 5, 7"),
     ]
 )
 
 
-def test_example(inEjemplo, outMensaje):
-    assert example(inEjemplo) == outMensaje
+def test_impares(inRango, outMensaje):
+    assert impares(inRango) == outMensaje

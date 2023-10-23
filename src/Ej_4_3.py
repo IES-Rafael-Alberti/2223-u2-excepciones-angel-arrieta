@@ -1,15 +1,21 @@
-def example(ejemplo):
-    ejemplo = None
-    return ejemplo
+def esEntero(numero: int):
+    if type(numero) == int:
+        respuesta = False
+    else:
+        respuesta = True
+    return respuesta
 
 
 if __name__ == "__main__":
-    try:
-        # Entrada
-        entrada = str(input(">\t"))
-    except ValueError:
-        print("")
-    # Proceso
-    procesado = example(entrada)
-    # Salida
-    print(procesado)
+    entradaInvalida = False
+    while not entradaInvalida:
+        try:
+            # Entrada
+            entrada = input("Introduce números enteros\t")
+            entrada_util = int(entrada)
+            # Proceso
+            entradaInvalida = esEntero(entrada_util)
+        # Salida
+        except ValueError:
+            print("La entrada no es correcta")
+            entradaInvalida = True

@@ -1,14 +1,16 @@
 import pytest
-from src.Ej_4_3 import example
+from src.Ej_4_3 import esEntero
 
 
 @pytest.mark.parametrize(
-    "inEjemplo, outMensaje",
+    "inNumero, outBoolean",
     [
-        ("Prueba1", "Salida"),
+        (1, False),
+        ("tre", True),
+        ([0, "aju"], True)
     ]
 )
 
 
-def test_example(inEjemplo, outMensaje):
-    assert example(inEjemplo) == outMensaje
+def test_esEntero(inNumero, outBoolean):
+    assert esEntero(inNumero) == outBoolean
