@@ -1,7 +1,10 @@
 def unaVida(edad: int):
     resultado = ""
-    for anos in range(edad):
-        resultado += f"{anos + 1}\n"
+    if edad == 0:
+        resultado = "0\n"
+    else:
+        for anos in range(edad):
+            resultado += f"{anos + 1}\n"
     return resultado[:-1]
 
 
@@ -12,10 +15,11 @@ if __name__ == "__main__":
             # Entrada
             edad_actual = input("Introduzca su edad\t")
             edad_util = int(edad_actual)
+            if edad_util < 0:
+                raise ValueError
             edadValida = True
         except ValueError:
             print("Por favor, introduzca una edad valida")
-
     # Proceso
     recorrido_vida = unaVida(edad_util)
     # Salida
