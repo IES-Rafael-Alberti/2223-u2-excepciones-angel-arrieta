@@ -13,5 +13,5 @@ if __name__ == "__main__":
         recorrido_vida = unaVida(edad_actual)
         # Salida
         print(recorrido_vida)
-    except:
+    except ValueError:
         print("Por favor, introduzca un número")
