@@ -6,12 +6,17 @@ def unaVida(edad: int):
 
 
 if __name__ == "__main__":
-    try:
-        # Entrada
-        edad_actual = int(input("Introduzca su edad\t"))
-        # Proceso
-        recorrido_vida = unaVida(edad_actual)
-        # Salida
-        print(recorrido_vida)
-    except ValueError:
-        print("Por favor, introduzca un número")
+    edadValida = False
+    while not edadValida:
+        try:
+            # Entrada
+            edad_actual = input("Introduzca su edad\t")
+            edad_util = int(edad_actual)
+            edadValida = True
+        except ValueError:
+            print("Por favor, introduzca una edad valida")
+
+    # Proceso
+    recorrido_vida = unaVida(edad_util)
+    # Salida
+    print(recorrido_vida)
